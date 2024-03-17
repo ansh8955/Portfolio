@@ -3,8 +3,8 @@ import passgenerator from '../assets/portfolio/passgenerator.PNG';
 import agecalculator from '../assets/portfolio/agecalculator.PNG';
 import pookimon from '../assets/portfolio/pookimon.PNG';
 import dadjokegenerate from '../assets/portfolio/dadjokegenerate.PNG';
-import resumeTemplate from '../assets/portfolio/resumeTemplate.PNG';
-import Leaderboard from '../assets/portfolio/Leaderboard.PNG';
+import resumeTemplate from '../assets/portfolio/resumeTemplate.png';
+import Leaderboard from '../assets/portfolio/Leaderboard.png';
 
 
 const Projects = () => {
@@ -52,7 +52,7 @@ const Projects = () => {
 
     ]
   return (
-    <div name="portfolio" className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
+    <div name="portfolio" className='bg-gradient-to-b from-black to-gray-800 w-full text-white '>
 
     <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
 
@@ -65,16 +65,24 @@ const Projects = () => {
         </div>
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
+{
+
+    projects.map(({id,src})=>(
+
+        <div key ={id} className='shadow-md shadow-gray-600 rounded-lg'>
+
+<img src={src} alt='' className='rounded-md hover:scale-105'/>
+<div className='flex  items-center justify-center'>
+    <button className='w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200'>Demo</button>
+    <button className='w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200'>Code</button>
+</div>
+</div>
+
+    ))
+}
 
 
-            <div className='shadow-md shadow-gray-600 rounded-lg'>
-
-                <img src={passgenerator} alt='' className='rounded-md hover:scale-105'/>
-                <div className='flex  items-center justify-center'>
-                    <button className='w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200'>Demo</button>
-                    <button className='w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200'>Code</button>
-                </div>
-            </div>
+           
         </div>
     </div>
       
